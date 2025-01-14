@@ -6,7 +6,6 @@ export interface OpenAIConfig {
 export interface PineconeConfig {
   apiKey: string;
   indexName: string;
-  indexNameTwo: string;
 }
 
 export interface LangChainConfig {
@@ -26,4 +25,19 @@ export interface SearchResult {
   score: number;
   content: string;
   metadata: Record<string, any>;
+}
+
+export interface PineconeDocument {
+  id: string;
+  values: number[];
+  metadata?: Record<string, any>;
+}
+
+export interface PineconeSearchResult extends SearchResult {
+  values?: number[];
+}
+
+export interface PineconeService {
+  index: string;
+  namespace?: string;
 } 

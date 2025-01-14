@@ -2,16 +2,20 @@
   "name": "rag-fusion-ts",
   "version": "1.0.0",
   "description": "RAG Fusion implementation in TypeScript",
-  "main": "dist/main.js",
+  "main": "src/main.ts",
   "scripts": {
-    "start": "node dist/main.js",
+    "start": "ts-node src/main.ts",
     "build": "tsc",
     "dev": "ts-node src/main.ts",
     "test": "jest"
   },
   "dependencies": {
+    "@langchain/community": "^0.3.24",
+    "@pinecone-database/pinecone": "^4.1.0",
     "axios": "^1.7.9",
-    "dotenv": "^16.4.7"
+    "dotenv": "^16.4.7",
+    "faiss-node": "^0.5.1",
+    "langchain": "^0.3.11"
   },
   "devDependencies": {
     "@types/jest": "^29.5.14",
